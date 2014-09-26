@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var messageLabel: UILabel!
     
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var enterNameTextField: UITextField!
     
     @IBOutlet weak var enterMessageTextField: UITextField!
@@ -29,6 +30,11 @@ class ViewController: UIViewController {
 
     @IBAction func sendMailButtonPressed(sender: UIButton) {
         // Code will run when we press the button
+        nameLabel.textColor = UIColor.blueColor()
+        nameLabel.hidden = false
+        nameLabel.text = enterNameTextField.text
+        enterNameTextField.text = ""
+
         // This is an extra line to see what happens with github
         messageLabel.text = enterMessageTextField.text
         messageLabel.hidden = false
